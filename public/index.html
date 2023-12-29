@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chigozie Philip - Software Engineer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Chigozie Philip</div>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="auth-buttons">
+        <button onclick="showLoginForm()">Login</button>
+        <button onclick="showSignupForm()">Sign Up</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header id="about">
+    <div class="intro">
+      <h1>Hi, I'm Chigozie Philip</h1>
+      <p>A dedicated and results-driven software engineer with a passion for crafting innovative solutions. Let's turn ideas into reality!</p>
+    </div>
+  </header>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="project" onclick="openProjectModal(1)">
+      <img src="images/travelara.jpg" alt="Travelara Project">
+      <h2>Travelara</h2>
+      <p>Transforming dream trips into reality. A platform for planning and organizing group travels.</p>
+    </div>
+
+    <div class="project" onclick="openProjectModal(2)">
+      <img src="images/rigley2.jpg" alt="Rigley 2 Project">
+      <h2>Rigley 2 - "Flappy Bug"</h2>
+      <p>An exciting web-based game featuring Rigley navigating through firewalls in a "Flappy Bird" style.</p>
+    </div>
+
+    <!-- Add more projects as needed -->
+
+    <!-- Project Modals -->
+    <div id="projectModal" class="modal">
+      <span class="close" onclick="closeProjectModal()">&times;</span>
+      <div id="projectContent"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Let's connect and discuss how we can work together to achieve your goals.</p>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Login and Sign Up Forms -->
+  <div class="overlay" id="loginOverlay" onclick="hideForms()"></div>
+  <div class="login-form" id="loginForm">
+    <span class="close-button" onclick="hideForms()">&times;</span>
+    <!-- Your login form content goes here -->
+  </div>
+  <div class="signup-form" id="signupForm">
+    <span class="close-button" onclick="hideForms()">&times;</span>
+    <!-- Your sign-up form content goes here -->
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Chigozie Philip - Software Engineer</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
